@@ -1,0 +1,7 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Authorization code</title><style>body{font-family:system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#222}a{color:#0a58ca}</style></head><body><h1>Authorization</h1>
+<p id="m">Waiting for the authorization code ...</p>
+<p>This page only displays the code from the address bar in your own browser. Nothing is sent anywhere.</p>
+<script>
+var q=new URLSearchParams(location.search), c=q.get("code"), e=q.get("error_description")||q.get("error");
+document.getElementById("m").textContent = c ? "Code (copy it into the terminal): " + c : (e ? "Error: " + e : "No code in the address.");
+</script></body></html>
